@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+	head
+		meta(http-equiv='Content-Type',content='text/html; charset=utf-8')
+		meta(name='viewport',content='width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui')
+		meta(name='apple-mobile-web-app-status-bar-style',content='black')
+		title 微信SDK demo
+		link(rel='stylesheet',type="text/css",href='/index.css')
+	body
+		h3 微信SDK demo
+		div.panel
+			h5 1.判断是否支持特定JS-API
+			button#checkJsApi checkJsApi
+			br
+			br
+			h5 2.分享接口
+			button#onMenuShareAppMessage 发送给朋友
+			br
+			br
+			h5 3.图像接口
+			button#chooseImage 选择图片
+			br
+			button#previewImage 预览图片
+			br
+			br
+			h5 4.位置接口
+			button#getLocation 获取位置
+			br
+			br
+			h5 5.微信扫一扫
+			br
+			button#scanQRCode0 扫一扫
+			br
+			button#refresh 刷新当前页面
+		script(src='http://res.wx.qq.com/open/js/jweixin-1.0.0.js')
+		script(type='text/javascript').
+			var signature = '#{signature}';
+			var nonceStr = '#{noncestr}';
+			var timestamp = '#{timestamp}';
+			var appId = '#{appId}';
+			var jsapi_ticket = '#{jsapi_ticket}';
+		script(src='/index.js')
