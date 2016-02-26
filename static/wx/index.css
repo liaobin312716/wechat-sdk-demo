@@ -1,0 +1,17 @@
+body{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+h3{text-align: center;color: red;}
+.panel{text-align: center;}
+.panel h5{
+	text-align: left;
+	color: #888;
+	margin: 0;
+}
+.panel button{
+	width: 90%;
+	height: 40px;
+	line-height: 40px;
+	margin: 5px auto;
+	border: none;
+	border-radius: 5px;
+	background: #e2e2e2;
+}
