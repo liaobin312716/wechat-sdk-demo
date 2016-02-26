@@ -18,6 +18,7 @@ exports.init = function (app) {
 	app.get('/wx', function(req,res){
 		var url = req.protocol + '://' + req.host + req.originalUrl; //获取当前url
 		console.log('url ======########======= ', url);
+		var url = req.protocol + '://' + req.host + req.originalUrl; //获取当前url 包含?后的但不包含#号后的
 		signature.sign(url,function(signatureMap){
 			signatureMap.appId = wechat_cfg.appid;
 			res.render('index',signatureMap);
